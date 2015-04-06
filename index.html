@@ -1,0 +1,12 @@
+<textarea>
+</textarea>
+<script>
+var MAPPING = {
+}
+document.QuerySelector('textarea').onkeyown = function(e) {
+  if (e.keyCode in MAPPING) {
+    e.preventDefault();
+    this.value += MAPPING[e.keyCode]
+  }
+}
+</script>
